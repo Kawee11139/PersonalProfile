@@ -1,39 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก | My Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fc;
+        }
+
+        .navbar {
+            background-color: #102a43;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #4dabf7 !important;
+        }
+
+        .hero {
+            min-height: 500px;
+            background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                        url("https://images.unsplash.com/photo-1500534623283-312aade485b7")
+                        center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .menu-card {
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    
-      <a class="navbar-brand" href="#">My Profile</a>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            👤 My Profile
+        </a>
+
+        <button class="navbar-toggler bg-light" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">หน้าแรก</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">ข้อมูลส่วนตัว</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="education.html">การศึกษา</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">ทักษะ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hobbies.html">งานอดิเรก</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">ติดต่อ</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="index.html">หน้าแรก</a></li>
-      <li><a href="info.html">ข้อมูลส่วนตัว</a></li>
-      <li><a href="#">การศึกษา</a></li>
-      <li><a href="#">ทักษะ</a></li>
-      <li><a href="#">งานอดิเรก</a></li>
-      <li><a href="#">ติดต่อ</a></li>
-    </ul>
-  </div>
 </nav>
 
-  <div class="jumbotron">
-  <h1>เว็บข้อมูลส่วนตัว</h1>
-  <h1>นายกวีวัฒน์ ประกอบสุข<h1>
-  <p>นักศึกษาเทคโนโลยีคอมพิวเตอร์และดิจิทัล</p>
-<div>
-  
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="col-md-7">
+            <h1>สวัสดีครับ 👋</h1>
+            <h2>ยินดีต้อนรับสู่เว็บไซต์ส่วนตัวของผม</h2>
+            <p class="lead mt-3">
+                เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำข้อมูลส่วนตัว
+                ประวัติการศึกษา ทักษะความสามารถ งานอดิเรก
+                และช่องทางการติดต่อ
+            </p>
 
+            <a href="profile.html" class="btn btn-primary btn-lg">
+                ดูข้อมูลส่วนตัว →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Menu -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card menu-card text-center p-4 shadow-sm h-100">
+                    <div class="fs-1">👤</div>
+                    <h4>ข้อมูลส่วนตัว</h4>
+                    <p>ข้อมูลเกี่ยวกับตัวผม</p>
+                    <a href="profile.html" class="btn btn-outline-primary">
+                        ดูข้อมูล
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card menu-card text-center p-4 shadow-sm h-100">
+                    <div class="fs-1">🎓</div>
+                    <h4>การศึกษา</h4>
+                    <p>ประวัติการศึกษา</p>
+                    <a href="education.html" class="btn btn-outline-primary">
+                        ดูประวัติ
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card menu-card text-center p-4 shadow-sm h-100">
+                    <div class="fs-1">💻</div>
+                    <h4>ทักษะ</h4>
+                    <p>ความสามารถและทักษะต่าง ๆ</p>
+                    <a href="skills.html" class="btn btn-outline-primary">
+                        ดูทักษะ
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer class="text-center py-4 bg-dark text-white">
+    © 2026 My Profile
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
